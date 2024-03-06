@@ -1,1 +1,3 @@
-console.log("Hello, World!");
+import { getTranding } from "./API/trendingGetters.js"
+
+getTranding();

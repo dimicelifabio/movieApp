@@ -11,7 +11,7 @@ const options = {  // opzioni che si danno come parametro alla funzione fetch
 
 }
 
-const getTranding = async () => {
+export const getTranding = async () => {
     const response = await fetch(url, options);
 
     const data = await response.json();  // estrarre l'oggeto 
