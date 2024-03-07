@@ -2,12 +2,15 @@
   "name": "movieapp",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js", 
+  "main": "index.js",
   "type": "module",
-  "scripts": {  
+  "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./JS/index.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
 }
