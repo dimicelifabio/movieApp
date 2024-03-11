@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="header">MovieAp</h1>
+</body>
+
+<script type ="module">
+    import {fixTitle, addParagraph} from "./JS/utilis/dom.js";
+    import {getTrandingMovies} from "./JS/API/trendingGetters.js";
+    import{baseUrl} from "./JS/API/config.js";
+
+    fixTitle();
+    addParagraph();
+    
+    const trandingMovies = getTrandingMovies(baseUrl).then((data) => {
+        console.log(data.results);
+    });
+    
+
+</script>
+</html>
