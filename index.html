@@ -4,24 +4,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MovieApp | Fabio Di Miceli</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 id="header">MovieAp</h1>
+    <div class="navbar">
+        <div class="logo">
+            <h1 id="header">MovieApp</h1>
+        </div>
+        <div class="menu">
+            <ul class="link-menu">
+                <li><a href="*">Home</a></li>
+                <li><a href="*">Film</a></li>
+                <li><a href="*">Serie Tv</a></li>
+                <li><a href="*">Supporto</a></li>
+                <li><a href="*">Contatti</a></li>
+            </ul>
+        </div>
+        
+    </div>
+
+    <div class="left-navbar">
+        <ul>
+            <li><a href="*"></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+        </ul>
+    </div>
+
+    <div id="movies">
+        <div class="header-movies">
+            <div class="title-movies">
+                <h2>Film</h2>
+            </div>
+            
+        </div>
+    </div>
+
+    <div id="serieTv">
+
+    </div>
+
+
 </body>
 
 <script type ="module">
-    import {fixTitle, addParagraph} from "./JS/utilis/dom.js";
+    import {fixTitle} from "./JS/utilis/dom.js";
     import {getTrandingMovies} from "./JS/API/trendingGetters.js";
     import{baseUrl} from "./JS/API/config.js";
+    import{createMovieView} from "./js/dom-manipulator/createList.js";
+
 
     fixTitle();
-    addParagraph();
     
-    const trandingMovies = getTrandingMovies(baseUrl).then((data) => {
-        console.log(data.results);
+    
+    getTrandingMovies(baseUrl).then((data) => {
+        const list = document.getElementById ("movies");
+        createMovieView(data);
+
     });
+
+
+
     
+
+
+
+    
+
 
 </script>
 </html>

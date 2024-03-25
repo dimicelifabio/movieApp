@@ -3,7 +3,6 @@
 import { baseUrl } from "./config.js";
 import { urlSearch } from "./config.js";
 
-const url = "https://api.themoviedb.org/3/trending/all/day?language=en-US";
 
 import { options } from "./config.js";
 

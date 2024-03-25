@@ -1,6 +1,6 @@
 // funzione che al caricamento della pagina verifichi che il titolo sia corretto, nel caso lo corregge
 
-export const fixTitle = () => {
+export const fixTitle = () => { // correzione titolo
     const title = document.getElementById('header'); // prendi elemento con ID = 'header'
 
     const titleContent = title.innerHTML; // cosa è contenuto tra il tag di apertura e di chiusura
@@ -15,7 +15,7 @@ export const fixTitle = () => {
 
 // funzione che al caricamento della pagina aggiunga un paragrafo con il titolo di un Film
 
-export const addParagraph = () => {
+/*export const addParagraph = () => { 
 
     const title = document.getElementById("header");
 
@@ -26,4 +26,4 @@ export const addParagraph = () => {
     title.appendChild(paragraph); // metodo dell'oggetto document (html) aggiunta di un nuovo tag alla pagina HTML. Applicato al titolo
     
 }
-
+*/
