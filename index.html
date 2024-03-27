@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MovieApp | Fabio Di Miceli</title>
     <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <div class="navbar">
@@ -24,16 +25,6 @@
         
     </div>
 
-    <div class="left-navbar">
-        <ul>
-            <li><a href="*"></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-        </ul>
-    </div>
-
     <div id="movies">
         <div class="header-movies">
             <div class="title-movies">
@@ -44,27 +35,42 @@
     </div>
 
     <div id="serieTv">
-
+        <div class="header-movies">
+            <div class="title-movies">
+                <h2>Serie Tv</h2>
+            </div>
+            
+        </div>
     </div>
 
 
+    <div id="actors">
+
+    </div>
+
+    
 </body>
 
 <script type ="module">
     import {fixTitle} from "./JS/utilis/dom.js";
     import {getTrandingMovies} from "./JS/API/trendingGetters.js";
     import{baseUrl} from "./JS/API/config.js";
-    import{createMovieView} from "./js/dom-manipulator/createList.js";
-
-
+    import{createMovieView, createSerieTvView, createActorsView } from "./js/dom-manipulator/createList.js";
     fixTitle();
-    
     
     getTrandingMovies(baseUrl).then((data) => {
         const list = document.getElementById ("movies");
         createMovieView(data);
+        createSerieTvView(data);
+        createActorsView(data);
 
     });
+
+    
+            
+    
+
+    
 
 
 

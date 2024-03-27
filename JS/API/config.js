@@ -2,6 +2,7 @@
 dotenv.config();*/
 
 export const baseUrl = "https://api.themoviedb.org/3/trending/"; // parte comune di entrambi URL
+export const BaseUrlSearch = "https://api.themoviedb.org/3/search/movie?query=";
 export const urlSearch = "person/day?language=en-US"
 export const options = {  // opzioni che si danno come parametro alla funzione fetch 
     method: "GET", // metodo di chiamata. di default ti mette la GET
